@@ -1,0 +1,19 @@
+# Required Environment Variables
+
+Schema version: 1.0.0
+
+## signaling
+- SIGNALING_PORT
+- SIGNALING_HOST
+- SIP_TLS_CERT_PATH
+- SIP_TLS_KEY_PATH
+- TURN_URL
+- TURN_USERNAME
+- TURN_PASSWORD
+
+## ai
+- AI_ASSIST_MODE
+- AI_POLICY_PROFILE
+
+## context
+- CONTEXT_STORE_URL

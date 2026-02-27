@@ -1,0 +1,12 @@
+{
+  "schema_version": "1.0.0",
+  "required_paths": [
+    "services/signaling/src/server.js",
+    "services/ai/src/assignment-recommender.js",
+    "services/context/src/context-service.js",
+    "services/skill-engine/src/orchestrator.js",
+    "docs/architecture/system-architecture.md",
+    "docs/architecture/skill-orchestration-layer.md",
+    "docs/architecture/skill-orchestration-microservices-mapping.md"
+  ]
+}

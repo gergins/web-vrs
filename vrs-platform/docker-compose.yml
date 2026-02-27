@@ -1,0 +1,70 @@
+version: "3.9"
+
+services:
+  signaling:
+    build: ./services/signaling
+    ports:
+      - "4001:4001"
+
+  sip-gateway:
+    build: ./services/sip-gateway
+    environment:
+      - SIGNALING_HTTP_URL=http://signaling:4001/events
+    ports:
+      - "4002:4002"
+    depends_on:
+      - signaling
+
+  assignment:
+    build: ./services/assignment
+    ports:
+      - "4003:4003"
+
+  context:
+    build: ./services/context
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - AUTH_REQUIRED=false
+    ports:
+      - "4004:4004"
+    depends_on:
+      - redis
+
+  workforce-forecasting:
+    build: ./services/workforce-forecasting
+    ports:
+      - "4010:4010"
+
+  ai-assist:
+    build: ./services/ai-assist
+    ports:
+      - "4011:4011"
+
+  redis:
+    image: redis:7
+    ports:
+      - "6379:6379"
+
+  web:
+    build: ./apps/web
+    environment:
+      - NEXT_PUBLIC_APP_URL=http://localhost:3000
+      - NEXT_PUBLIC_TURN_URL=turn:turn.example.com:3478
+      - NEXT_PUBLIC_TURN_USERNAME=vrs
+      - NEXT_PUBLIC_TURN_PASSWORD=securepassword
+    ports:
+      - "3000:3000"
+    depends_on:
+      - signaling
+      - sip-gateway
+      - assignment
+      - context
+      - ai-assist
+
+  interpreter:
+    build: ./apps/interpreter
+    ports:
+      - "3004:3004"
+    depends_on:
+      - signaling
+      - assignment

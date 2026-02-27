@@ -1,0 +1,14 @@
+﻿{
+  "signaling": {
+    "transport": "wss",
+    "tls_required": true,
+    "allow_plaintext_sip": false
+  },
+  "media": {
+    "srtp_required": true,
+    "allowed_codecs": ["VP8", "H264", "OPUS"]
+  },
+  "security": {
+    "hardcoded_credentials_allowed": false
+  }
+}

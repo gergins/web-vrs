@@ -1,0 +1,3 @@
+{
+  "fields": ["sessionId","callId","interpreterId","latencyMs","packetLoss"]
+}

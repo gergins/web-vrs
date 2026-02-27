@@ -1,0 +1,14 @@
+﻿{
+  "required": [
+    "profile_id",
+    "profile_name",
+    "employment_model",
+    "scheduling_modes",
+    "kpi_mode",
+    "wellbeing_controls",
+    "certification_tracking",
+    "reporting_required"
+  ],
+  "employment_model_allowed": ["public_service", "provider_mixed", "hybrid", "emerging_flexible"],
+  "kpi_mode_allowed": ["equity_coverage", "efficiency_availability", "balanced"]
+}

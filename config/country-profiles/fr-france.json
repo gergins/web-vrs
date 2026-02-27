@@ -1,0 +1,37 @@
+{
+  "country_code": "FR",
+  "country_name": "France",
+  "classification_strategy": "platform_provider",
+  "regulatory": {
+    "authority": "ARCEP and national accessibility/public-service authorities",
+    "accessibility_frameworks": [
+      "RGAA",
+      "EU accessibility baseline"
+    ],
+    "telecom_classification_likely": true
+  },
+  "emergency": {
+    "service_number": "114",
+    "video_relay_required": true,
+    "notes": "114 provides emergency access via app/SMS/web channels for Deaf and hard-of-hearing users; country launch must validate emergency routing obligations."
+  },
+  "numbering": {
+    "e164_required": true,
+    "sip_uri_supported": true
+  },
+  "interpreter": {
+    "certification_required": true,
+    "gender_preference_policy": "configurable_opt_in"
+  },
+  "operations": {
+    "availability_target": "24x7",
+    "reporting_required": true
+  },
+  "compliance": {
+    "privacy_frameworks": [
+      "GDPR",
+      "French data-protection requirements"
+    ],
+    "audit_required": true
+  }
+}

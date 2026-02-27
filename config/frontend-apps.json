@@ -1,0 +1,41 @@
+﻿{
+  "schema_version": "1.0.0",
+  "apps": [
+    {
+      "id": "web-app",
+      "path": "frontend/apps/web-app",
+      "node_version": "20",
+      "install_command": "npm ci",
+      "build_command": "npm run build",
+      "test_command": "",
+      "enabled": false
+    },
+    {
+      "id": "interpreter-console",
+      "path": "frontend/apps/interpreter-console",
+      "node_version": "20",
+      "install_command": "npm ci",
+      "build_command": "npm run build",
+      "test_command": "",
+      "enabled": false
+    },
+    {
+      "id": "admin-portal",
+      "path": "frontend/apps/admin-portal",
+      "node_version": "20",
+      "install_command": "npm ci",
+      "build_command": "npm run build",
+      "test_command": "",
+      "enabled": false
+    },
+    {
+      "id": "ops-tools",
+      "path": "frontend/apps/ops-tools",
+      "node_version": "20",
+      "install_command": "npm ci",
+      "build_command": "npm run build",
+      "test_command": "",
+      "enabled": false
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+﻿{
+  "version": "1.0.0",
+  "policy_mode": "opt_in",
+  "rules": {
+    "interpreter_gender_preference": {
+      "allowed_values": ["male", "female", "no_preference"],
+      "strict_match_allowed": true,
+      "default": "no_preference"
+    },
+    "language_and_dialect_preference": {
+      "enabled": true,
+      "strict_match_allowed": true
+    },
+    "regional_cultural_accommodations": {
+      "enabled": true,
+      "tenant_scoped": true,
+      "country_profile_scoped": true
+    }
+  },
+  "guardrails": {
+    "no_hardcoded_global_gender_rule": true,
+    "legal_profile_required_for_strict_constraints": true,
+    "user_consent_required": true,
+    "audit_decision_required": true,
+    "fallback_with_explicit_prompt": true
+  },
+  "assignment_decision_trace": {
+    "required_fields": [
+      "session_id",
+      "correlation_id",
+      "tenant_id",
+      "country_profile",
+      "requested_constraints",
+      "applied_constraints",
+      "strict_match_required",
+      "decision_outcome",
+      "fallback_used"
+    ]
+  }
+}

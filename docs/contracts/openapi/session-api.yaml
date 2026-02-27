@@ -1,0 +1,74 @@
+﻿openapi: 3.0.3
+info:
+  title: VRS Session API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+paths:
+  /v1/sessions:
+    post:
+      summary: Create a new relay session
+      operationId: createSession
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [call_type, language]
+              properties:
+                call_type:
+                  type: string
+                  enum: [video_relay]
+                language:
+                  type: string
+                priority:
+                  type: string
+                  enum: [standard, urgent]
+      responses:
+        '201':
+          description: Session created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+  /v1/sessions/{sessionId}/end:
+    post:
+      summary: End a relay session
+      operationId: endSession
+      security:
+        - bearerAuth: []
+      parameters:
+        - name: sessionId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Session ended
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Session'
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  schemas:
+    Session:
+      type: object
+      required: [session_id, state, created_at]
+      properties:
+        session_id:
+          type: string
+        state:
+          type: string
+          enum: [request_received, interpreter_assigned, hearing_party_dialing, relay_active, call_ended]
+        created_at:
+          type: string
+          format: date-time

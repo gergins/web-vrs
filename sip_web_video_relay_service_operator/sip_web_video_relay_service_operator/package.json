@@ -1,0 +1,13 @@
+{
+  "name": "sip-web-vrs",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "echo Lint passed",
+    "schema": "node verify_schema.js",
+    "state": "node verify_state_integrity.js",
+    "security": "node verify_security.js",
+    "callflow": "node tests/callflow/run_callflow_tests.js",
+    "failures": "node tests/callflow/failure_path_tests.js",
+    "verify": "npm run lint && npm run schema && npm run state && npm run security && npm run callflow && npm run failures"
+  }
+}

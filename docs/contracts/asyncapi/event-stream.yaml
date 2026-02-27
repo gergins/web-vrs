@@ -1,0 +1,69 @@
+﻿asyncapi: '2.6.0'
+info:
+  title: VRS Event Stream
+  version: '1.0.0'
+channels:
+  session.events:
+    description: Session lifecycle events
+    subscribe:
+      message:
+        oneOf:
+          - $ref: '#/components/messages/SessionStarted'
+          - $ref: '#/components/messages/SessionStateChanged'
+          - $ref: '#/components/messages/SessionEnded'
+  queue.events:
+    description: Queue and assignment events
+    subscribe:
+      message:
+        oneOf:
+          - $ref: '#/components/messages/InterpreterAssigned'
+          - $ref: '#/components/messages/QueueDelay'
+components:
+  messages:
+    SessionStarted:
+      payload:
+        type: object
+        required: [event_name, session_id, correlation_id, timestamp]
+        properties:
+          event_name: { type: string, enum: [session_started] }
+          session_id: { type: string }
+          correlation_id: { type: string }
+          timestamp: { type: string, format: date-time }
+    SessionStateChanged:
+      payload:
+        type: object
+        required: [event_name, session_id, correlation_id, state_from, state_to, timestamp]
+        properties:
+          event_name: { type: string, enum: [session_state_changed] }
+          session_id: { type: string }
+          correlation_id: { type: string }
+          state_from: { type: string }
+          state_to: { type: string }
+          timestamp: { type: string, format: date-time }
+    SessionEnded:
+      payload:
+        type: object
+        required: [event_name, session_id, correlation_id, timestamp]
+        properties:
+          event_name: { type: string, enum: [session_ended] }
+          session_id: { type: string }
+          correlation_id: { type: string }
+          timestamp: { type: string, format: date-time }
+    InterpreterAssigned:
+      payload:
+        type: object
+        required: [event_name, session_id, interpreter_id, timestamp]
+        properties:
+          event_name: { type: string, enum: [interpreter_assigned] }
+          session_id: { type: string }
+          interpreter_id: { type: string }
+          timestamp: { type: string, format: date-time }
+    QueueDelay:
+      payload:
+        type: object
+        required: [event_name, session_id, delay_seconds, timestamp]
+        properties:
+          event_name: { type: string, enum: [queue_delay] }
+          session_id: { type: string }
+          delay_seconds: { type: integer }
+          timestamp: { type: string, format: date-time }

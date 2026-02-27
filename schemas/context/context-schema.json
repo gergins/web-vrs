@@ -1,0 +1,26 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "VRS Context Schema",
+  "type": "object",
+  "required": ["kinds", "versioning", "integrity_rules"],
+  "properties": {
+    "kinds": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 4
+    },
+    "versioning": {
+      "type": "object",
+      "required": ["required", "conflict_resolution"],
+      "properties": {
+        "required": { "type": "boolean" },
+        "conflict_resolution": { "type": "string" }
+      }
+    },
+    "integrity_rules": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 3
+    }
+  }
+}

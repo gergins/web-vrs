@@ -1,0 +1,28 @@
+id: vrs-web-sip
+goal: Provide web-based VRS with SIP connectivity
+
+users:
+  - deaf-user
+  - interpreter
+  - operator
+
+capabilities:
+  - webrtc-client
+  - sip-gateway
+  - interpreter-assignment
+  - call-queue
+
+non_functional:
+  availability: 99.9
+  latency_target_ms: 150
+  accessibility_standard: WCAG-AA
+
+deployment:
+  environment: cloud
+  regions: 1
+  scaling: auto
+
+output:
+  - architecture
+  - repo-scaffold
+  - initial-services

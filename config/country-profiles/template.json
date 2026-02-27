@@ -1,0 +1,31 @@
+﻿{
+  "country_code": "XX",
+  "country_name": "Template Country",
+  "classification_strategy": "platform_provider",
+  "regulatory": {
+    "authority": "TBD",
+    "accessibility_frameworks": ["TBD"],
+    "telecom_classification_likely": true
+  },
+  "emergency": {
+    "service_number": "TBD",
+    "video_relay_required": true,
+    "notes": "Document emergency accessibility expectations"
+  },
+  "numbering": {
+    "e164_required": true,
+    "sip_uri_supported": true
+  },
+  "interpreter": {
+    "certification_required": true,
+    "gender_preference_policy": "configurable_opt_in"
+  },
+  "operations": {
+    "availability_target": "24x7",
+    "reporting_required": true
+  },
+  "compliance": {
+    "privacy_frameworks": ["TBD"],
+    "audit_required": true
+  }
+}

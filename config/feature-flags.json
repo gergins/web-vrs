@@ -1,0 +1,15 @@
+﻿{
+  "rollouts": {
+    "enable_canary": true,
+    "enable_blue_green": false,
+    "canary_traffic_percent": 10
+  },
+  "ai": {
+    "enable_assignment_assist": true,
+    "enable_eta_predictor": true,
+    "enforce_assist_only": true
+  },
+  "signaling": {
+    "reject_invite_when_draining": true
+  }
+}

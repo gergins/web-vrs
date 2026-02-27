@@ -1,0 +1,18 @@
+﻿{
+  "profile_id": "sweden_public",
+  "profile_name": "Sweden-style Public Service Workforce",
+  "employment_model": "public_service",
+  "scheduling_modes": ["shift", "appointment"],
+  "kpi_mode": "equity_coverage",
+  "wellbeing_controls": {
+    "structured_breaks": true,
+    "max_continuous_minutes": 90,
+    "fatigue_alerts": true
+  },
+  "certification_tracking": {
+    "required": true,
+    "renewal_tracking": true,
+    "continuing_education_tracking": true
+  },
+  "reporting_required": true
+}

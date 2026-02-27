@@ -1,0 +1,20 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "version": "1.0.0",
+  "initial": "request_received",
+  "terminal": "call_ended",
+  "states": [
+    "request_received",
+    "interpreter_assigned",
+    "hearing_party_dialing",
+    "relay_active",
+    "call_ended"
+  ],
+  "transitions": {
+    "request_received": ["interpreter_assigned"],
+    "interpreter_assigned": ["hearing_party_dialing"],
+    "hearing_party_dialing": ["relay_active"],
+    "relay_active": ["call_ended"],
+    "call_ended": []
+  }
+}

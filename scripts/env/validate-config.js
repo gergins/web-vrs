@@ -1,0 +1,1 @@
+﻿require("../validate-config.js");

@@ -1,0 +1,33 @@
+﻿{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Skill Registry Schema",
+  "type": "object",
+  "required": ["schema_version", "skills"],
+  "properties": {
+    "schema_version": { "type": "string" },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "skill_id",
+          "name",
+          "version",
+          "enabled",
+          "owner",
+          "trigger",
+          "inputs",
+          "workflow",
+          "guardrails",
+          "metrics"
+        ],
+        "properties": {
+          "skill_id": { "type": "string" },
+          "name": { "type": "string" },
+          "version": { "type": "string" },
+          "enabled": { "type": "boolean" }
+        }
+      }
+    }
+  }
+}

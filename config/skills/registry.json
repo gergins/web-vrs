@@ -1,0 +1,27 @@
+﻿{
+  "schema_version": "1.0.0",
+  "skills": [
+    {
+      "skill_id": "interpreter_matching",
+      "name": "Interpreter Matching",
+      "version": "1.0.0",
+      "enabled": false,
+      "owner": "routing-team",
+      "trigger": {
+        "event": "call_request_created"
+      },
+      "inputs": ["user_preferences", "interpreter_availability", "workforce_profile"],
+      "workflow": {
+        "steps": [
+          { "step_id": "s1", "type": "decision", "hook": "scoreInterpreterCandidates" },
+          { "step_id": "s2", "type": "action", "action": "select_top_candidate" },
+          { "step_id": "s3", "type": "action", "action": "notify_session_service" }
+        ]
+      },
+      "guardrails": {
+        "required_checks": ["contract_valid", "ethics_valid", "context_integrity_valid"]
+      },
+      "metrics": ["assignment_latency_ms", "reassignment_rate"]
+    }
+  ]
+}

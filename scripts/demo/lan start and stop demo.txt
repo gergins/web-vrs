@@ -1,0 +1,22 @@
+-----start----
+
+powershell -ExecutionPolicy Bypass -File "c:\Users\Gergin\Projects\vrs test 1\scripts\demo\start-lan-demo.ps1" -LanIp 192.168.1.50
+
+-----start with camera list fix on HTTP LAN (Chrome)----
+
+powershell -ExecutionPolicy Bypass -File "c:\Users\Gergin\Projects\vrs test 1\scripts\demo\start-lan-demo.ps1" -LanIp 192.168.1.50 -LaunchChromeSecure
+
+----stop-----
+
+powershell -ExecutionPolicy Bypass -File "c:\Users\Gergin\Projects\vrs test 1\scripts\demo\stop-lan-demo.ps1"
+
+example
+http://192.168.1.50:3000
+http://192.168.1.50:3004
+
+------firewall-----
+powershell -ExecutionPolicy Bypass -File "c:\Users\Gergin\Projects\vrs test 1\scripts\demo\open-firewall-demo.ps1"
+
+----------If still failing, run and share output:-----------
+
+Invoke-WebRequest -Uri "http://localhost:4001/debug/state" -UseBasicParsing | Select-Object -ExpandProperty Content

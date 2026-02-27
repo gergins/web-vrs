@@ -1,0 +1,65 @@
+﻿{
+  "version": "1.0.0",
+  "capabilities": [
+    {
+      "id": "ai_precall_brief",
+      "name": "AI Pre-Call Brief",
+      "category": "ai_assist",
+      "maturity_level": 1,
+      "risk_level": "medium",
+      "default_mode": "off",
+      "interpreter_control_required": true,
+      "human_override_required": true,
+      "country_profile_constraints": ["legal_profile_check"],
+      "notes": "Topic prediction and terminology prep only"
+    },
+    {
+      "id": "ai_live_captions",
+      "name": "AI Live Captions Assist",
+      "category": "ai_assist",
+      "maturity_level": 1,
+      "risk_level": "medium",
+      "default_mode": "off",
+      "interpreter_control_required": true,
+      "human_override_required": true,
+      "country_profile_constraints": ["privacy_profile_check"],
+      "notes": "Reference captions for interpreter assist; no autonomous output decisions"
+    },
+    {
+      "id": "ai_glossary_prompts",
+      "name": "AI Glossary Prompts",
+      "category": "ai_assist",
+      "maturity_level": 2,
+      "risk_level": "low",
+      "default_mode": "off",
+      "interpreter_control_required": true,
+      "human_override_required": true,
+      "country_profile_constraints": [],
+      "notes": "Terminology suggestions only"
+    },
+    {
+      "id": "ai_fatigue_assist",
+      "name": "AI Fatigue Assist",
+      "category": "workforce_assist",
+      "maturity_level": 3,
+      "risk_level": "high",
+      "default_mode": "off",
+      "interpreter_control_required": true,
+      "human_override_required": true,
+      "country_profile_constraints": ["workforce_policy_check", "privacy_profile_check"],
+      "notes": "Fatigue indicators and break/switch suggestions"
+    },
+    {
+      "id": "ai_postcall_summary",
+      "name": "AI Post-Call Summary",
+      "category": "ai_assist",
+      "maturity_level": 2,
+      "risk_level": "medium",
+      "default_mode": "off",
+      "interpreter_control_required": true,
+      "human_override_required": true,
+      "country_profile_constraints": ["retention_policy_check"],
+      "notes": "Post-call documentation assist"
+    }
+  ]
+}

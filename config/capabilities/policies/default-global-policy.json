@@ -1,0 +1,22 @@
+﻿{
+  "policy_id": "default-global-policy",
+  "scope": {
+    "tenant": "default",
+    "country_profile": "global"
+  },
+  "modes_allowed": ["off", "silent_assist", "guided_assist", "training_mode"],
+  "capabilities": {
+    "ai_precall_brief": { "mode": "guided_assist", "enabled": true },
+    "ai_live_captions": { "mode": "silent_assist", "enabled": true },
+    "ai_glossary_prompts": { "mode": "guided_assist", "enabled": true },
+    "ai_fatigue_assist": { "mode": "off", "enabled": false },
+    "ai_postcall_summary": { "mode": "training_mode", "enabled": true }
+  },
+  "guardrails": {
+    "human_override_always": true,
+    "no_automated_interpretation_output": true,
+    "consent_required_for_sensitive_ai": true,
+    "audit_required": true,
+    "country_profile_legal_check_required": true
+  }
+}

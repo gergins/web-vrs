@@ -1,0 +1,55 @@
+﻿{
+  "version": "1.0.0",
+  "principles": {
+    "human_primacy": true,
+    "accessibility_equity": true,
+    "transparency_explainability": true,
+    "privacy_confidentiality": true,
+    "non_replacement_commitment": true,
+    "fairness_bias_mitigation": true,
+    "safety_reliability": true,
+    "accountability_governance": true
+  },
+  "rights": {
+    "user": {
+      "right_to_human_service": true,
+      "right_to_opt_out_of_ai": true,
+      "right_to_privacy": true,
+      "right_to_accessible_explanations": true
+    },
+    "interpreter": {
+      "right_to_control_assistance_level": true,
+      "right_to_non_surveillance_environment": true,
+      "right_to_fair_evaluation": true,
+      "right_to_training": true
+    }
+  },
+  "guardrails": {
+    "human_override_always": true,
+    "no_automated_interpretation_output": true,
+    "consent_management_required": true,
+    "secondary_data_use_requires_explicit_permission": true,
+    "bias_audit_required": true,
+    "ethical_risk_review_before_release": true,
+    "incident_reporting_channel_required": true
+  },
+  "oversight": {
+    "ethics_board_required": true,
+    "required_roles": [
+      "ai_ethics_lead",
+      "accessibility_lead",
+      "data_protection_officer"
+    ],
+    "community_advisory_group_required": true
+  },
+  "kpis": {
+    "required": [
+      "human_override_rate",
+      "user_trust_score",
+      "accessibility_satisfaction_score",
+      "bias_incident_rate",
+      "data_retention_compliance",
+      "interpreter_satisfaction_score"
+    ]
+  }
+}

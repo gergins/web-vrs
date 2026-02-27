@@ -1,0 +1,17 @@
+﻿{
+  "kinds": [
+    "session_context",
+    "user_context",
+    "interpreter_context",
+    "conversation_context"
+  ],
+  "versioning": {
+    "required": true,
+    "conflict_resolution": "last_write_with_audit"
+  },
+  "integrity_rules": [
+    "immutable_audit_log_required",
+    "role_based_access_required",
+    "schema_validation_required"
+  ]
+}

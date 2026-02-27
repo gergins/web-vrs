@@ -1,0 +1,20 @@
+﻿{
+  "required": [
+    "country_code",
+    "country_name",
+    "classification_strategy",
+    "regulatory",
+    "emergency",
+    "numbering",
+    "interpreter",
+    "operations",
+    "compliance"
+  ],
+  "classification_strategy_allowed": ["telecom_operator", "platform_provider", "marketplace"],
+  "regulatory_required": ["authority", "accessibility_frameworks", "telecom_classification_likely"],
+  "emergency_required": ["service_number", "video_relay_required", "notes"],
+  "numbering_required": ["e164_required", "sip_uri_supported"],
+  "interpreter_required": ["certification_required", "gender_preference_policy"],
+  "operations_required": ["availability_target", "reporting_required"],
+  "compliance_required": ["privacy_frameworks", "audit_required"]
+}

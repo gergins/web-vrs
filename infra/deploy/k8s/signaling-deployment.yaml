@@ -1,0 +1,47 @@
+﻿apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: signaling
+spec:
+  replicas: 3
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 1
+  selector:
+    matchLabels:
+      app: signaling
+  template:
+    metadata:
+      labels:
+        app: signaling
+    spec:
+      terminationGracePeriodSeconds: 30
+      containers:
+      - name: signaling
+        image: your-registry/signaling:latest
+        ports:
+        - containerPort: 7070
+        env:
+        - name: SIGNALING_PORT
+          value: "7070"
+        - name: DRAIN_TIMEOUT_MS
+          value: "15000"
+        readinessProbe:
+          httpGet:
+            path: /health/readiness
+            port: 7070
+          initialDelaySeconds: 3
+          periodSeconds: 5
+        livenessProbe:
+          httpGet:
+            path: /health/liveness
+            port: 7070
+          initialDelaySeconds: 5
+          periodSeconds: 10
+        lifecycle:
+          preStop:
+            httpGet:
+              path: /admin/drain
+              port: 7070

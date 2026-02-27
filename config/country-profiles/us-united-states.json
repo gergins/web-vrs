@@ -1,0 +1,31 @@
+﻿{
+  "country_code": "US",
+  "country_name": "United States",
+  "classification_strategy": "platform_provider",
+  "regulatory": {
+    "authority": "FCC",
+    "accessibility_frameworks": ["TRS/VRS framework"],
+    "telecom_classification_likely": true
+  },
+  "emergency": {
+    "service_number": "911",
+    "video_relay_required": true,
+    "notes": "Emergency and registration obligations must be satisfied per TRS rules"
+  },
+  "numbering": {
+    "e164_required": true,
+    "sip_uri_supported": true
+  },
+  "interpreter": {
+    "certification_required": true,
+    "gender_preference_policy": "configurable_opt_in"
+  },
+  "operations": {
+    "availability_target": "24x7",
+    "reporting_required": true
+  },
+  "compliance": {
+    "privacy_frameworks": ["State/Federal privacy controls"],
+    "audit_required": true
+  }
+}

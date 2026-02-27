@@ -1,0 +1,1 @@
+powershell -ExecutionPolicy Bypass -File "c:\Users\Gergin\Projects\vrs test 1\scripts\demo\stop-local-demo.ps1"

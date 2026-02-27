@@ -1,0 +1,29 @@
+﻿{
+  "version": "1.0.0",
+  "default_enablement": "disabled",
+  "required_pre_enable_checks": [
+    "feature_gate_approved",
+    "ethics_policy_valid",
+    "ethics_workflow_valid",
+    "country_profile_valid",
+    "workforce_profile_valid",
+    "capability_policy_valid",
+    "tests_passing"
+  ],
+  "allowed_rollout_strategies": [
+    "off",
+    "internal_only",
+    "canary",
+    "tenant_opt_in",
+    "general_availability"
+  ],
+  "high_risk_features_require": {
+    "additional_signoff_roles": [
+      "ai_ethics_lead",
+      "accessibility_lead",
+      "data_protection_officer"
+    ],
+    "human_override_confirmed": true,
+    "incident_playbook_linked": true
+  }
+}

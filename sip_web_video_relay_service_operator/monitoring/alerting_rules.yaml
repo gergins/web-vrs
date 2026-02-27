@@ -1,0 +1,5 @@
+groups:
+- name: relay-alerts
+  rules:
+  - alert: HighLatency
+    expr: latency_ms > 300

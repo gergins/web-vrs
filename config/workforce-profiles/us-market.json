@@ -1,0 +1,18 @@
+﻿{
+  "profile_id": "us_market",
+  "profile_name": "US-style Market Workforce",
+  "employment_model": "provider_mixed",
+  "scheduling_modes": ["shift", "on_demand", "appointment"],
+  "kpi_mode": "efficiency_availability",
+  "wellbeing_controls": {
+    "structured_breaks": true,
+    "max_continuous_minutes": 120,
+    "fatigue_alerts": true
+  },
+  "certification_tracking": {
+    "required": true,
+    "renewal_tracking": true,
+    "continuing_education_tracking": true
+  },
+  "reporting_required": true
+}

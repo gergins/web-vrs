@@ -1,0 +1,125 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Video Relay Service website for Deaf and hard-of-hearing users to communicate with hearing users through sign language interpreters." />
+  <title>SignalBridge VRS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">SB</span>
+      <div>
+        <p class="eyebrow">24/7 Video Relay</p>
+        <h1>SignalBridge VRS</h1>
+      </div>
+    </div>
+    <a class="btn btn-light" href="#request">Start a Relay Call</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="kicker">Accessible communication for everyone</p>
+        <h2 id="hero-title">Deaf users connect with hearing users through live sign language interpreters.</h2>
+        <p class="lead">Web-based VRS with secure video sessions, fast interpreter routing, and clear call status updates.</p>
+        <div class="hero-actions">
+          <a class="btn" href="#request">Request Interpreter</a>
+          <a class="btn btn-ghost" href="#how">How it works</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-live="polite">
+        <p class="card-title">System Status</p>
+        <div class="stat-row">
+          <span>Signaling</span>
+          <strong id="signal-status">TLS Enabled</strong>
+        </div>
+        <div class="stat-row">
+          <span>Media</span>
+          <strong id="media-status">SRTP Ready</strong>
+        </div>
+        <div class="stat-row">
+          <span>Interpreter Pool</span>
+          <strong id="pool-status">Online</strong>
+        </div>
+        <div class="stat-row">
+          <span>Workspace</span>
+          <strong id="workspace-status">c:\Users\Gergin\Projects\vrs test 1</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" class="steps" aria-labelledby="how-title">
+      <h3 id="how-title">How Relay Calls Work</h3>
+      <div class="step-grid">
+        <article>
+          <h4>1. Start Video Session</h4>
+          <p>The Deaf caller opens a secure web video session from any modern browser.</p>
+        </article>
+        <article>
+          <h4>2. Interpreter Joins</h4>
+          <p>A qualified sign language interpreter is assigned and joins the call.</p>
+        </article>
+        <article>
+          <h4>3. Hearing Party Connects</h4>
+          <p>The interpreter relays communication between signing and spoken language in real time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="request" class="request" aria-labelledby="request-title">
+      <h3 id="request-title">Request an Interpreter</h3>
+      <form id="relay-form" novalidate>
+        <label>
+          Your Name
+          <input name="name" type="text" required autocomplete="name" />
+        </label>
+        <label>
+          Preferred Language
+          <select name="language" required>
+            <option value="">Select language</option>
+            <option>ASL</option>
+            <option>BSL</option>
+            <option>ISL</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label>
+          Hearing Party Phone Number
+          <input name="phone" type="tel" required inputmode="tel" placeholder="+1 555 123 4567" />
+        </label>
+        <label>
+          Priority
+          <select name="priority" required>
+            <option>Standard</option>
+            <option>Urgent</option>
+          </select>
+        </label>
+        <button class="btn" type="submit">Join Queue</button>
+      </form>
+
+      <div class="queue-panel" aria-live="polite">
+        <p class="queue-title">Live Queue</p>
+        <p id="queue-status">No active request.</p>
+        <ol id="call-flow" class="flow-list">
+          <li data-state="pending">Request received</li>
+          <li data-state="pending">Interpreter assignment</li>
+          <li data-state="pending">Hearing party dialing</li>
+          <li data-state="pending">Relay call in progress</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>SignalBridge VRS uses secure signaling (TLS) and encrypted media (SRTP) for relay communications.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

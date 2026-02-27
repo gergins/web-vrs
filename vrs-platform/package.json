@@ -1,0 +1,11 @@
+﻿{
+  "name": "vrs-platform",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev:start-all": "node scripts/dev/start-all.js",
+    "test:e2e": "node tests/e2e/callflow.e2e.test.mjs",
+    "verify:all": "node scripts/verify-all.js"
+  }
+}

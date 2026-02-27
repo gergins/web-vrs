@@ -1,0 +1,39 @@
+﻿{
+  "version": "1.0.0",
+  "required_stages": [
+    "problem_definition",
+    "ethical_impact_assessment",
+    "co_design",
+    "ethical_requirements",
+    "development_safeguards",
+    "testing_validation",
+    "ethical_review_gate",
+    "deployment_transparency",
+    "continuous_monitoring",
+    "iteration_governance"
+  ],
+  "required_gate_outcomes": ["approve", "conditional", "redesign"],
+  "required_signoff_roles": [
+    "ai_ethics_lead",
+    "accessibility_lead",
+    "data_protection_officer"
+  ],
+  "required_artifacts": [
+    "ethics_risk_register",
+    "model_transparency_notes",
+    "consent_log",
+    "audit_trail",
+    "transparency_report"
+  ],
+  "incident_response_required_steps": [
+    "detect",
+    "contain",
+    "notify",
+    "investigate",
+    "fix",
+    "communicate",
+    "update_safeguards"
+  ],
+  "agile_checkpoints_required": true,
+  "community_input_required": true
+}

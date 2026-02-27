@@ -1,0 +1,31 @@
+﻿{
+  "country_code": "EU",
+  "country_name": "EU Baseline",
+  "classification_strategy": "platform_provider",
+  "regulatory": {
+    "authority": "Member-state regulator",
+    "accessibility_frameworks": ["EECC", "EAA", "EN 301 549"],
+    "telecom_classification_likely": true
+  },
+  "emergency": {
+    "service_number": "112",
+    "video_relay_required": true,
+    "notes": "Country-specific emergency implementation differs by member state"
+  },
+  "numbering": {
+    "e164_required": true,
+    "sip_uri_supported": true
+  },
+  "interpreter": {
+    "certification_required": true,
+    "gender_preference_policy": "configurable_opt_in"
+  },
+  "operations": {
+    "availability_target": "24x7",
+    "reporting_required": true
+  },
+  "compliance": {
+    "privacy_frameworks": ["GDPR"],
+    "audit_required": true
+  }
+}

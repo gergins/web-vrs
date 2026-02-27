@@ -1,0 +1,9 @@
+{
+  "states": {
+    "IDLE": {},
+    "REGISTERED": {},
+    "INVITED": {},
+    "ACTIVE": {},
+    "TERMINATED": {}
+  }
+}

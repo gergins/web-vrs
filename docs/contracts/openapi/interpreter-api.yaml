@@ -1,0 +1,42 @@
+﻿openapi: 3.0.3
+info:
+  title: VRS Interpreter Queue API
+  version: 1.0.0
+servers:
+  - url: https://api.example.com
+paths:
+  /v1/interpreters/availability:
+    post:
+      summary: Update interpreter availability
+      operationId: updateAvailability
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status:
+                  type: string
+                  enum: [ready, busy, break, offline]
+      responses:
+        '200':
+          description: Availability updated
+  /v1/queue/assignments:
+    get:
+      summary: Get pending assignment for interpreter
+      operationId: getAssignment
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Assignment status
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

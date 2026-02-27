@@ -1,0 +1,31 @@
+﻿{
+  "country_code": "SE",
+  "country_name": "Sweden",
+  "classification_strategy": "platform_provider",
+  "regulatory": {
+    "authority": "PTS",
+    "accessibility_frameworks": ["National relay procurement model", "EU accessibility baseline"],
+    "telecom_classification_likely": true
+  },
+  "emergency": {
+    "service_number": "112",
+    "video_relay_required": true,
+    "notes": "Emergency accessibility integration must be profile-tested"
+  },
+  "numbering": {
+    "e164_required": true,
+    "sip_uri_supported": true
+  },
+  "interpreter": {
+    "certification_required": true,
+    "gender_preference_policy": "configurable_opt_in"
+  },
+  "operations": {
+    "availability_target": "24x7",
+    "reporting_required": true
+  },
+  "compliance": {
+    "privacy_frameworks": ["GDPR"],
+    "audit_required": true
+  }
+}
